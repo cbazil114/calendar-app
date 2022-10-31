@@ -1,5 +1,5 @@
 const container = $(".container");
-const time = ["9 am", "10 am", "11 am", "12 pm", "1 pm", "2 pm", "3 pm", "4 pm", "5 pm", "6 pm"];
+const time = ["9", "10", "11", "12", "13", "14", "15", "16", "17"];
 // Might need a label/object
 
 // Function to display date on load of page
@@ -35,48 +35,67 @@ function timeValue(current) {
     $(".time-" + value + " .input").val(localStorage.getItem(value));
   })
 
-  // if (strTime == current) {
-  //   return $(".present")
-  //  }
-  //  if(hour == 12 && hour > parseInt(current) && current.includes('PM')){
-  //     return $(".future")
-  //  }
-  //  if(current.includes('AM') && amPm == 'PM'){
-  //     return $(".past")
-  //  } else if(amPm == 'AM' && current.includes('PM')){
-  //     return $(".future)")
-  //  }
+  if (strTime == current) {
+    return $(".present")
+   }
+   if(hour == 12 && hour > parseInt(current) && current.includes('PM')){
+      return $(".future")
+   }
+   if(current.includes('AM') && amPm == 'PM'){
+      return $(".past")
+   } else if(amPm == 'AM' && current.includes('PM')){
+      return $(".future)")
+   }
    
-  //  if(current.includes(amPm)){
-  //     let currentNumber = parseInt(current.replace(amPm, " "))
-  //     if(currentNumber <= hour){
-  //        return 'gray'
-  //     } else if(currentNumber == 12){
-  //        return 'gray'
-  //     } else {
-  //        return 'green'
-  //     }
-  // }
+   if(current.includes(amPm)){
+      let currentNumber = parseInt(current.replace(amPm, " "))
+      if(currentNumber <= hour){
+         return $(".past")
+      } else if(currentNumber == 12){
+         return $(".past")
+      } else {
+         return $(".future")
+      }
+  }
 }
 
-// Creating a function that will create the rows and elements
-$.each(time, function(index, value) {
-  const bgColor = timeValue(value);
-  const row = $("<div>").addClass("row");
-  const timeValueCol = $("<div>" + value + "</div>").addClass("hour time col-sm-1");
-  const descriptionCol = $("<div></div").addClass("past description col-sm-10" + bgColor + " time-" + value);
-  const saveBtnCol = $("<button></button>").addClass("saveBtn col-sm-1");
-  const textarea = $("<textarea></textarea").addClass("input col-sm-12");
-  const saveIcon = $('<i class="ui-icon-plus"></i>');
-  
-  row.append(timeValueCol);
-  row.append(descriptionCol);
-    descriptionCol.append(textarea);
-  row.append(saveBtnCol);
-    saveBtnCol.append(saveIcon);
+// if(moment().format('HH') > this[i].id) {
+//   this[i].classList.add("past");
+//   } else if (moment().format('HH') < this[i].id) {
+//     this[i].classList.add("future");
+//   } else {
+//     this[i].classList.add("present");
+//   }
 
-  container.append(row);
-})
+const $(".row");
+
+if(moment().format('HH') > rows[i].id) {
+  rows[i].classList.add("past");
+  } else if (moment().format('HH') < rows[i].id) {
+    rows[i].classList.add("future");
+  } else (moment().format('HH') === rows[i].id) {
+    rows[i].classList.add("present");
+  }
+
+
+// Creating a function that will create the rows and elements
+// $.each(time, function(index, value) {
+//   const bgColor = timeValue(value);
+//   const row = $("<div>").addClass("row");
+//   const timeValueCol = $("<div>" + value + "</div>").addClass("hour time col");
+//   const descriptionCol = $("<div></div").addClass("past description col" + bgColor + " time-" + value);
+//   const saveBtnCol = $("<button></button>").addClass("saveBtn col");
+//   const textarea = $("<textarea></textarea").addClass("input");
+//   const saveIcon = $('<i class="ui-icon-plus"></i>');
+  
+//   row.append(timeValueCol);
+//   row.append(descriptionCol);
+//     descriptionCol.append(textarea);
+//   row.append(saveBtnCol);
+//     saveBtnCol.append(saveIcon);
+
+//   container.append(row);
+// })
 
 // Giving the buttons functionality
 $(".timeBtn").click(function() {
@@ -86,12 +105,6 @@ $(".timeBtn").click(function() {
     // console.log(input);
   localStorage.setItem(recordTime, input);
 })
-
-// if (timeValue == current) {
-//   addClass("present");
-// }
-
-
 
 
 // function getTime (current) {
@@ -106,7 +119,6 @@ $(".timeBtn").click(function() {
 //   let strTime = hours + ":" + minutes + "" + amPm;
 //   console.log(strTime);
 // }
-
 
 // $(document).ready(repeatTime)
 
