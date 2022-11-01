@@ -39,22 +39,23 @@ $(document).ready(function() {
         
         let hourRelativeParse = parseInt(blockTime);
         let currentTimeParse = parseInt(currentTime);
+        
   
         // if (parseInt(hourRelativeParse) < parseInt(currentTimeParse)) {
         if (currentTimeParse < hourRelativeParse) {
-          $`(#${i})`.addClass("past");
-          $`(#${i})`.removeClass("present");
-          $`(#${i})`.removeClass("future");
+          `$(#${i})`.addClass("past");
+          `$(#${i})`.removeClass("present");
+          `$(#${i})`.removeClass("future");
         // } else if (parseInt(hourRelativeParse) > parseInt(currentTimeParse)) {
         } else if (currentTimeParse > hourRelativeParse) {
-          $`(#${i})`.removeClass("past");
-          $`(#${i})`.removeClass("present");
-          $`(#${i})`.addClass("future");
+          `$(#${i})`.removeClass("past");
+          `$(#${i})`.removeClass("present");
+          `$(#${i})`.addClass("future");
         // } else if (parseInt(hourRelativeParse)=== parseInt(currentTimeParse)){
-        } else if (currentTimeParse === relativeHourParse) {  
-          $`(#${i})`.removeClass("past");
-          $`(#${i})`.addClass("present");
-          $`(#${i})`.removeClass("future");
+        } else if (currentTimeParse === hourRelativeParse) {  
+          `$(#${i})`.removeClass("past");
+          `$(#${i})`.addClass("present");
+          `$(#${i})`.removeClass("future");
         }
       }
     }
