@@ -27,8 +27,14 @@ $(document).ready(function() {
   });
 
   // The following function will organize the different hours into past, present, and future
-  function timeSpan() {
+  function relativeTime() {
     let currentTime = moment().function();
+    $(".time-block").each(function () {
+      let hourAttr = $(this).attr("id");
+      let hourRelative = 
+      let hourRelativeParse = parseInt(hourRelative);
+      let currentTimeParse = parseInt(currentTime);
+    })
 });
 
 
