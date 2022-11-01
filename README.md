@@ -44,7 +44,7 @@ Next, I create a function that embodies everything of the container. I start wit
 Next, I create an event on click of the saveBtn to save new information into the local storge. 
 
 
-The last major section is organizing the time. It was a significant challenge, but it was doable. I create the necessary variables to use in the if loop for color organization, and I use a for loop to find move through the array of id numbers for the time-blocks. 
+The last major section is organizing the time. It was a significant challenge, but it was doable. I create the necessary variables to use in the if loop for color organization.
 
 Eventually, I used a large if loop to add and remove classes for the colors. I feel there is a cleaner way of approaching this, but I do not know of what it is yet. However, this is an effective method for the assignment. 
 

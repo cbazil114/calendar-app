@@ -30,35 +30,36 @@ $(document).ready(function() {
   function relativeTime() {
     let currentTime = moment().hours();
     $(".time-block").each(function () {
-      let hourAttr = $(this).attr("id");
+      let hourAttr = parseInt($(this).attr("id"));
       console.log(hourAttr);
-      let hourRelative = function() {
-      for (let i = 9; i < 17; i++) {
-        let blockTime = `$(#${i})`;
-        console.log(`$(#${i})`);
+      // let hourRelative = function() {
+      // for (let i = 9; i < 17; i++) {
+      //   let blockTime = `$(this)`;
+      //   console.log(`$(this)`);
         
         // let hourRelativeParse = parseInt(blockTime);
         // let currentTimeParse = parseInt(currentTime);
         
   
         // if (parseInt(hourRelativeParse) < parseInt(currentTimeParse)) {
-        if (currentTime < hourRelative) {
-          `$(#${i})`.addClass("past");
-          `$(#${i})`.removeClass("present");
-          `$(#${i})`.removeClass("future");
+        if (currentTime < hourAttr) {
+          $(this).addClass("past");
+          $(this).removeClass("present");
+          $(this).removeClass("future");
+          console.log("Time",hourAttr, currentTime, "Past")
         // } else if (parseInt(hourRelativeParse) > parseInt(currentTimeParse)) {
-        } else if (currentTime > hourRelative) {
-          `$(#${i})`.removeClass("past");
-          `$(#${i})`.removeClass("present");
-          `$(#${i})`.addClass("future");
+        } else if (currentTime > hourAttr) {
+          $(this).removeClass("past");
+          $(this).removeClass("present");
+          $(this).addClass("future");
         // } else if (parseInt(hourRelativeParse)=== parseInt(currentTimeParse)){
-        } else if (currentTime === hourRelative) {  
-          `$(#${i})`.removeClass("past");
-          `$(#${i})`.addClass("present");
-          `$(#${i})`.removeClass("future");
+        } else if (currentTime === hourAttr) {  
+          $(this).removeClass("past");
+          $(this).addClass("present");
+          $(this).removeClass("future");
         }
-      }
-    }
+      // }
+    
     })
   }
   relativeTime();
