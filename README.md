@@ -59,4 +59,4 @@ The deployed application can be accessed here: https://cbazil114.github.io/calen
 
 ## Credits
 
-* i want to thank Natasha Mann for tutoring me again, and I would like to thank the many learning assistants who helped me along the way!
+* I want to thank Natasha Mann for tutoring me again, and I would like to thank the many learning assistants who helped me along the way!
