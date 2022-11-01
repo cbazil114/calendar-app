@@ -34,26 +34,30 @@ $(document).ready(function() {
       console.log(hourAttr);
       let hourRelative = function() {
       for (let i = 9; i < 17; i++) {
-        `$(#${i})`;
+        let blockTime = `$(#${i})`;
         console.log(`$(#${i})`);
+        
+        let hourRelativeParse = parseInt(blockTime);
+        let currentTimeParse = parseInt(currentTime);
+  
+        // if (parseInt(hourRelativeParse) < parseInt(currentTimeParse)) {
+        if (currentTimeParse < hourRelativeParse) {
+          $`(#${i})`.addClass("past");
+          $`(#${i})`.removeClass("present");
+          $`(#${i})`.removeClass("future");
+        // } else if (parseInt(hourRelativeParse) > parseInt(currentTimeParse)) {
+        } else if (currentTimeParse > hourRelativeParse) {
+          $`(#${i})`.removeClass("past");
+          $`(#${i})`.removeClass("present");
+          $`(#${i})`.addClass("future");
+        // } else if (parseInt(hourRelativeParse)=== parseInt(currentTimeParse)){
+        } else if (currentTimeParse === relativeHourParse) {  
+          $`(#${i})`.removeClass("past");
+          $`(#${i})`.addClass("present");
+          $`(#${i})`.removeClass("future");
+        }
       }
     }
-      let hourRelativeParse = parseInt(hourRelative);
-      let currentTimeParse = parseInt(currentTime);
-
-      if (parseInt(hourRelativeParse) < parseInt(currentTimeParse)) {
-        $(this).addClass("past");
-        $(this).removeClass("present");
-        $(this).removeClass("future");
-      } else if (parseInt(hourRelativeParse) > parseInt(currentTimeParse)) {
-        $(this).removeClass("past");
-        $(this).removeClass("present");
-        $(this).addClass("future");
-      } else if (parseInt(hourRelativeParse)=== parseInt(currentTimeParse)){
-        $(this).removeClass("past");
-        $(this).addClass("present");
-        $(this).removeClass("future");
-      }
     })
   }
   relativeTime();

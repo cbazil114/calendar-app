@@ -35,8 +35,25 @@ No installation required.
 
 ## Project Completion
 
+The HTML and the CSS are mostly done for you. However, you do need to add the rows for each time slot into the HTML (there are ways of doing this solely through JS, but I was unable to figure it out myself). Each row has a time Id, a class, and the internal elements of div, textarea, and button. After that, you move to JS for everything else!
+
+First, I include an onload function to load the date in the header. 
+
+Next, I create a function that embodies everything of the container. I start with creating a variable and a forloop to retrieve items from the local storage. 
+
+Next, I create an event on click of the saveBtn to save new information into the local storge. 
+
+
+The last major section is organizing the time. It was a significant challenge, but it was doable. 
+
+Eventually, I used a large for loop to add and remove classes for the colors. I feel there is a cleaner way of approaching this, but I do not know of what it is yet. However, this is an effective method for the assignment. 
+
 ## Screenshot
+
+
 ## Link
+
+
 
 ## Credits
 
