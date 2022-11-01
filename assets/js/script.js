@@ -31,11 +31,34 @@ $(document).ready(function() {
     let currentTime = moment().function();
     $(".time-block").each(function () {
       let hourAttr = $(this).attr("id");
-      let hourRelative = 
+      console.log(hourAttr);
+      let hourRelative = function() {
+      for (let i = 9; i < 17; i++) {
+        `$(#${i})`;
+        console.log(`$(#${i})`);
+      }
+    }
       let hourRelativeParse = parseInt(hourRelative);
       let currentTimeParse = parseInt(currentTime);
+
+      if (parseInt(hourRelativeParse) < parseInt(currentTimeParse)) {
+        $(this).addClass("past");
+        $(this).removeClass("present");
+        $(this).removeClass("future");
+      } else if (parseInt(hourRelativeParse) > parseInt(currentTimeParse)) {
+        $(this).removeClass("past");
+        $(this).removeClass("present");
+        $(this).addClass("future");
+      } else {
+        $(this).removeClass("past");
+        $(this).addClass("present");
+        $(this).removeClass("future");
+      }
     })
+  }
+  relativeTime();
 });
+
 
 
 
