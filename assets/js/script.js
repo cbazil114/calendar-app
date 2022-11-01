@@ -37,22 +37,22 @@ $(document).ready(function() {
         let blockTime = `$(#${i})`;
         console.log(`$(#${i})`);
         
-        let hourRelativeParse = parseInt(blockTime);
-        let currentTimeParse = parseInt(currentTime);
+        // let hourRelativeParse = parseInt(blockTime);
+        // let currentTimeParse = parseInt(currentTime);
         
   
         // if (parseInt(hourRelativeParse) < parseInt(currentTimeParse)) {
-        if (currentTimeParse < hourRelativeParse) {
+        if (currentTime < hourRelative) {
           `$(#${i})`.addClass("past");
           `$(#${i})`.removeClass("present");
           `$(#${i})`.removeClass("future");
         // } else if (parseInt(hourRelativeParse) > parseInt(currentTimeParse)) {
-        } else if (currentTimeParse > hourRelativeParse) {
+        } else if (currentTime > hourRelative) {
           `$(#${i})`.removeClass("past");
           `$(#${i})`.removeClass("present");
           `$(#${i})`.addClass("future");
         // } else if (parseInt(hourRelativeParse)=== parseInt(currentTimeParse)){
-        } else if (currentTimeParse === hourRelativeParse) {  
+        } else if (currentTime === hourRelative) {  
           `$(#${i})`.removeClass("past");
           `$(#${i})`.addClass("present");
           `$(#${i})`.removeClass("future");
