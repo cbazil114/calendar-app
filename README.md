@@ -1,5 +1,7 @@
 # calendar-app
 
+## Description
+
 The objective of this repository is to create a function workday planner. With hours from 9 am to 5 pm, a user should be able to input their tasks and objectives into each time slot, while being able to identify the current time visually. 
 
 Unlike previous assignment, you are required to incorporate APIs such as JQuery, moment.js, and Bootstrap to assist in building your code. 
@@ -30,3 +32,12 @@ No installation required.
 * **THEN** the text for that event is saved in local storage
 * **WHEN** I refresh the page
 * **THEN** the saved events persist
+
+## Project Completion
+
+## Screenshot
+## Link
+
+## Credits
+
+* i want to thank Natasha Mann for tutoring me again, and I would like to thank the many learning assistants who helped me along the way!

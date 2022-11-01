@@ -13,7 +13,7 @@ window.onload = function() {
 $(document).ready(function() {
   const keyStrings = Object.keys(localStorage);
   for (let i = 0; i < keyStrings.length; i++) {
-    let data = localStorage.getItem(keyStrings[i]);
+    let description = localStorage.getItem(keyStrings[i]);
     let userInput = $("#" + keyStrings[i]).find("textarea");
     userInput.val(description);
   }
@@ -28,7 +28,7 @@ $(document).ready(function() {
 
   // The following function will organize the different hours into past, present, and future
   function relativeTime() {
-    let currentTime = moment().function();
+    let currentTime = moment().hours();
     $(".time-block").each(function () {
       let hourAttr = $(this).attr("id");
       console.log(hourAttr);
@@ -49,7 +49,7 @@ $(document).ready(function() {
         $(this).removeClass("past");
         $(this).removeClass("present");
         $(this).addClass("future");
-      } else {
+      } else if (parseInt(hourRelativeParse)=== parseInt(currentTimeParse)){
         $(this).removeClass("past");
         $(this).addClass("present");
         $(this).removeClass("future");
