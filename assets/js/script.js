@@ -43,15 +43,15 @@ $(document).ready(function() {
   
         // if (parseInt(hourRelativeParse) < parseInt(currentTimeParse)) {
         if (currentTime < hourAttr) {
-          $(this).addClass("past");
-          $(this).removeClass("present");
-          $(this).removeClass("future");
-          console.log("Time",hourAttr, currentTime, "Past")
-        // } else if (parseInt(hourRelativeParse) > parseInt(currentTimeParse)) {
-        } else if (currentTime > hourAttr) {
           $(this).removeClass("past");
           $(this).removeClass("present");
           $(this).addClass("future");
+          console.log("Time",hourAttr, currentTime, "Past")
+        // } else if (parseInt(hourRelativeParse) > parseInt(currentTimeParse)) {
+        } else if (currentTime > hourAttr) {
+          $(this).addClass("past");
+          $(this).removeClass("present");
+          $(this).removeClass("future");
         // } else if (parseInt(hourRelativeParse)=== parseInt(currentTimeParse)){
         } else if (currentTime === hourAttr) {  
           $(this).removeClass("past");
