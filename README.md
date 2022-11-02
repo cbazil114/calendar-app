@@ -50,7 +50,7 @@ Eventually, I used a large if loop to add and remove classes for the colors. I f
 
 ## Screenshot
 
-![Daily Calendar App](./assets/images/calendarappscreenshot.png).png)
+![Daily Calendar App](./assets/images/calendarappscreenshot.png)
 
 ## Link
 
